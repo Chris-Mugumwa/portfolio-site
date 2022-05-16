@@ -7,10 +7,15 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"svg": "svgr -d banner/icons banner/"
+		"svg": "svgr -d components/icons assets/"
 	},
 	"dependencies": {
 		"@emailjs/browser": "^3.6.2",
+		"@fontsource/kreon": "^4.5.9",
+		"@fontsource/libre-franklin": "^4.5.8",
+		"@fontsource/manrope": "^4.5.9",
+		"@fontsource/poppins": "^4.5.8",
+		"@fontsource/ropa-sans": "^4.5.8",
 		"@svgr/cli": "^6.2.1",
 		"@svgr/webpack": "^6.2.1",
 		"firebase": "^9.8.1",

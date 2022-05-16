@@ -1,0 +1,30 @@
+.landing {
+	display: flex;
+	height: calc(100vh - 6rem);
+	transition: all 0.5s ease-in-out;
+
+	&__text {
+		width: 70%;
+
+		@include respond(tab-land) {
+			width: 65%;
+		}
+
+		&--open {
+			background-color: $royal-purple;
+		}
+	}
+
+	&__wrapper {
+		width: 30%;
+		background-color: $royal-purple;
+
+		@include respond(tab-land) {
+			width: 35%;
+		}
+
+		&--open {
+			background-color: $white;
+		}
+	}
+}
