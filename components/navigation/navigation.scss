@@ -1,0 +1,104 @@
+.navigation {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 6rem;
+	transition: all 0.5s ease-in-out;
+
+	&__logo {
+		display: flex;
+		justify-content: flex-start;
+		width: 70%;
+		height: 100%;
+		transition: all 0.5s ease-in-out;
+
+		@include respond(tab-land) {
+			padding: 0 2rem;
+			width: 65%;
+		}
+
+		&--open {
+			background-color: $royal-purple;
+		}
+
+		&--icon {
+			transform: scale(0.6);
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		height: 100%;
+		width: 30%;
+		background-color: $royal-purple;
+		transition: all 0.5s ease-in-out;
+
+		@include respond(tab-land) {
+			width: 35%;
+			padding: 0 4.5rem;
+		}
+
+		&--open {
+			background-color: $white;
+		}
+	}
+
+	&__menu {
+		color: $white;
+		padding: 0 1.5rem;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+
+		@include respond(tab-land) {
+			display: none;
+		}
+
+		&--open {
+			color: $gray-dark;
+		}
+
+		&--icon {
+			width: 3rem;
+			height: 3rem;
+		}
+	}
+
+	&__list {
+		display: none;
+		list-style: none;
+		gap: 4rem;
+
+		@include respond(tab-land) {
+			display: inline-flex;
+		}
+	}
+
+	&__link {
+		position: relative;
+		text-decoration: none;
+		color: $white;
+		font-family: $font-libre-franklin;
+		font-size: 2rem;
+
+		&::before {
+			position: absolute;
+			bottom: -30%;
+			content: '';
+			height: 0.3rem;
+			width: 0;
+			background-color: $yellow-bright;
+			border-radius: 1000px;
+			transition: all 0.4s ease-in-out;
+		}
+
+		&:hover,
+		&:focus {
+			&::before {
+				width: 75%;
+			}
+		}
+	}
+}
