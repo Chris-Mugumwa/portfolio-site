@@ -9,6 +9,10 @@ const navigationData = [
 		path: '#projects',
 	},
 	{
+		name: 'My skills',
+		path: '#skills',
+	},
+	{
 		name: 'About me',
 		path: '#about',
 	},
@@ -23,22 +27,12 @@ export const Navigation = () => {
 
 	return (
 		<nav className='navigation'>
-			<div
-				className={
-					menuOpen
-						? 'navigation__logo navigation__logo--open'
-						: 'navigation__logo'
-				}>
+			<div className='navigation__logo'>
 				{menuOpen && <Icon2 className='navigation__logo--icon' />}
 				{!menuOpen && <Icon className='navigation__logo--icon' />}
 			</div>
 
-			<div
-				className={
-					menuOpen
-						? 'navigation__wrapper navigation__wrapper--open'
-						: 'navigation__wrapper'
-				}>
+			<div className='navigation__wrapper'>
 				<div
 					className={
 						menuOpen

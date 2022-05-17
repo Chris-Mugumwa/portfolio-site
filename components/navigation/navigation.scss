@@ -1,5 +1,6 @@
 .navigation {
 	position: relative;
+	z-index: 10000000;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -7,19 +8,17 @@
 	transition: all 0.5s ease-in-out;
 
 	&__logo {
+		position: relative;
+		z-index: 999;
 		display: flex;
 		justify-content: flex-start;
 		width: 70%;
 		height: 100%;
 		transition: all 0.5s ease-in-out;
 
-		@include respond(tab-land) {
+		@include respond(desktop) {
 			padding: 0 2rem;
-			width: 65%;
-		}
-
-		&--open {
-			background-color: $royal-purple;
+			width: 60%;
 		}
 
 		&--icon {
@@ -33,26 +32,23 @@
 		justify-content: flex-end;
 		height: 100%;
 		width: 30%;
-		background-color: $royal-purple;
 		transition: all 0.5s ease-in-out;
 
-		@include respond(tab-land) {
-			width: 35%;
+		@include respond(desktop) {
+			width: 40%;
 			padding: 0 4.5rem;
-		}
-
-		&--open {
-			background-color: $white;
 		}
 	}
 
 	&__menu {
+		position: relative;
+		z-index: 999;
 		color: $white;
 		padding: 0 1.5rem;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
 
-		@include respond(tab-land) {
+		@include respond(desktop) {
 			display: none;
 		}
 
@@ -67,11 +63,13 @@
 	}
 
 	&__list {
+		position: relative;
+		z-index: 999;
 		display: none;
 		list-style: none;
-		gap: 4rem;
+		gap: 3rem;
 
-		@include respond(tab-land) {
+		@include respond(desktop) {
 			display: inline-flex;
 		}
 	}

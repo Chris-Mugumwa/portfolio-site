@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const SvgDribblble = (props) => (
+const SvgDribble = (props) => (
   <svg
     width={24}
     height={24}
@@ -20,4 +20,4 @@ const SvgDribblble = (props) => (
   </svg>
 );
 
-export default SvgDribblble;
+export default SvgDribble;
