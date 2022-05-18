@@ -2,15 +2,14 @@ import * as React from "react";
 
 const SvgJira = (props) => (
   <svg
-    width={24}
-    height={24}
+    width={14}
+    height={14}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
   >
-    <circle cx={12} cy={12} r={12} fill="#fff" />
-    <path fill="url(#Jira_svg__a)" d="M5 5h14v14H5z" />
+    <path fill="url(#Jira_svg__a)" d="M0 0h14v14H0z" />
     <defs>
       <pattern
         id="Jira_svg__a"

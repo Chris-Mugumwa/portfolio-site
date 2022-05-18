@@ -1,6 +1,5 @@
 import { useMenu } from '../../hooks/index'
 import { Shapes } from '../shapes/Shapes'
-import { Ghost } from '../icons/index'
 
 const Landing = () => {
 	const { menuOpen, toggleMenu } = useMenu()
@@ -23,7 +22,6 @@ const Landing = () => {
 					</button>
 				</div>
 			</div>
-			<Ghost className='landing__ghost' />
 			<Shapes />
 		</header>
 	)

@@ -5,15 +5,15 @@ import { Menu } from '../menu/Menu'
 
 const navigationData = [
 	{
+		name: 'Skills',
+		path: '#skills',
+	},
+	{
 		name: 'Projects',
 		path: '#projects',
 	},
 	{
-		name: 'My skills',
-		path: '#skills',
-	},
-	{
-		name: 'About me',
+		name: 'About',
 		path: '#about',
 	},
 	{
@@ -22,7 +22,7 @@ const navigationData = [
 	},
 ]
 
-export const Navigation = () => {
+const Navigation = () => {
 	const { menuOpen, toggleMenu } = useMenu()
 
 	return (
@@ -67,3 +67,5 @@ export const Navigation = () => {
 		</nav>
 	)
 }
+
+export default Navigation

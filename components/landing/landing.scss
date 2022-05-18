@@ -20,12 +20,15 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 1rem;
-		max-width: 70%;
+
+		@include respond(tab-land) {
+			max-width: 70%;
+		}
 
 		&--name {
 			position: relative;
 			color: $royal-purple;
-			font-family: $font-poppins;
+			font-family: $font-kreon;
 			font-size: 2rem;
 
 			@include respond(tab-land) {
@@ -60,7 +63,7 @@
 
 		&--description {
 			color: $gray-dark;
-			font-family: $font-poppins;
+			font-family: $font-ropa;
 			font-size: 2.5rem;
 			margin-bottom: 1rem;
 

@@ -20,9 +20,26 @@
 
 	&__wrapper {
 		width: 20%;
+		position: relative;
 
 		@include respond(desktop) {
 			width: 35%;
+		}
+	}
+
+	&__poly {
+		position: absolute;
+		z-index: 10000;
+		right: 14%;
+		bottom: -3%;
+		width: 550%;
+		height: 160%;
+		clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
+		background-color: $strawberry-pink;
+		transition: all 0.3s ease-out;
+
+		&--open {
+			display: none;
 		}
 	}
 
