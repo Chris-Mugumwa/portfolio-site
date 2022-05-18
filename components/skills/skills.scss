@@ -1,0 +1,123 @@
+.skills {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	&__wrapper {
+		position: absolute;
+		z-index: 100000;
+		height: 100%;
+		width: 20%;
+		background-color: $royal-purple;
+
+		@include respond(desktop) {
+			width: 35%;
+		}
+	}
+
+	&__container {
+		position: relative;
+		align-self: flex-end;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		padding-right: 1.5rem;
+		flex-direction: column;
+		align-items: flex-end;
+
+		@include respond(desktop) {
+			width: 65%;
+			height: 80%;
+		}
+	}
+
+	&__navigation {
+		position: relative;
+		z-index: 10000000000;
+		height: 10%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&--label {
+			position: relative;
+			font-family: $font-libre-franklin;
+			font-size: 2rem;
+			padding-right: 1.8rem;
+
+			&::before {
+				position: absolute;
+				bottom: -20%;
+				content: '';
+				height: 0.3rem;
+				width: 60%;
+				background-color: $yellow-bright;
+				border-radius: 1000px;
+			}
+		}
+
+		&--logo {
+			transform: scale(0.6);
+		}
+	}
+
+	&__heading {
+		position: relative;
+		z-index: 10000;
+		margin-top: 2rem;
+		font-size: 3rem;
+		font-family: $font-libre-franklin;
+		text-align: right;
+		max-width: 75%;
+
+		@include respond(desktop) {
+			font-size: 6rem;
+		}
+	}
+
+	&__list {
+		position: relative;
+		z-index: 10000;
+		margin-top: 3rem;
+		width: 80%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__pill {
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.5rem;
+		margin: 0 0.8rem;
+		width: fit-content;
+		padding: 1rem;
+		margin: 1rem;
+		font-size: 2rem;
+		font-family: $font-poppins;
+		border-radius: 0.8rem;
+		box-shadow: 12px 0px 17px -7px rgba(78, 88, 88, 0.65);
+		-webkit-box-shadow: 12px 0px 17px -7px rgba(78, 88, 88, 0.65);
+		-moz-box-shadow: 12px 0px 17px -7px rgba(78, 88, 88, 0.65);
+
+		&--icon {
+			display: flex;
+			align-items: center;
+			justify-items: center;
+
+			& > * {
+				transform: scale(1.5);
+			}
+		}
+
+		&--name {
+			padding: 0 0.3rem;
+			border-left: 1px solid $gray-dark;
+		}
+	}
+}

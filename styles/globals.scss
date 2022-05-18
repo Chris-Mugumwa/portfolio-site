@@ -19,11 +19,21 @@ body {
 	overflow-x: hidden;
 }
 
+.app {
+	overflow-x: hidden;
+	position: relative;
+	scroll-behavior: smooth;
+	background-color: $white;
+}
+
 ::-webkit-scrollbar {
-	width: 0.8rem;
+	width: 0;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $royal-purple;
-	border-radius: 20rem;
+	display: none;
+}
+
+::-webkit-scrollbar-track {
+	display: none;
 }

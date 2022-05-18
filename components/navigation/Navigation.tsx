@@ -5,11 +5,15 @@ import { Menu } from '../menu/Menu'
 
 const navigationData = [
 	{
+		name: 'Skills',
+		path: '#skills',
+	},
+	{
 		name: 'Projects',
 		path: '#projects',
 	},
 	{
-		name: 'About me',
+		name: 'About',
 		path: '#about',
 	},
 	{
@@ -18,27 +22,17 @@ const navigationData = [
 	},
 ]
 
-export const Navigation = () => {
+const Navigation = () => {
 	const { menuOpen, toggleMenu } = useMenu()
 
 	return (
 		<nav className='navigation'>
-			<div
-				className={
-					menuOpen
-						? 'navigation__logo navigation__logo--open'
-						: 'navigation__logo'
-				}>
+			<div className='navigation__logo'>
 				{menuOpen && <Icon2 className='navigation__logo--icon' />}
 				{!menuOpen && <Icon className='navigation__logo--icon' />}
 			</div>
 
-			<div
-				className={
-					menuOpen
-						? 'navigation__wrapper navigation__wrapper--open'
-						: 'navigation__wrapper'
-				}>
+			<div className='navigation__wrapper'>
 				<div
 					className={
 						menuOpen
@@ -73,3 +67,5 @@ export const Navigation = () => {
 		</nav>
 	)
 }
+
+export default Navigation
