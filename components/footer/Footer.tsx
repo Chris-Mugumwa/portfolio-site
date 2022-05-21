@@ -1,9 +1,7 @@
+export {}
+
 const Footer = () => {
-	return (
-		<div className='footer'>
-			<h2>I like cheese</h2>
-		</div>
-	)
+	return <footer className='footer'>Footer</footer>
 }
 
 export default Footer

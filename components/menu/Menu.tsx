@@ -1,5 +1,3 @@
-import { Block } from '../block/Block'
-
 type MenuProps = {
 	menuOpen: boolean
 	toggleMenu: () => void
@@ -9,9 +7,7 @@ type MenuProps = {
 export const Menu = ({ menuOpen, toggleMenu, navigationData }: MenuProps) => {
 	return (
 		<div className={menuOpen ? 'menu  menu--open' : 'menu'}>
-			<div className='menu__wrapper'>
-				{/* <div className={menuOpen ? 'menu__poly--open' : 'menu__poly'} /> */}
-			</div>
+			<div className='menu__wrapper'></div>
 			<nav className='menu__navigation'>
 				<ul className='menu__list'>
 					{navigationData.map(menu => (
@@ -26,7 +22,6 @@ export const Menu = ({ menuOpen, toggleMenu, navigationData }: MenuProps) => {
 					))}
 				</ul>
 			</nav>
-			{/* <Block /> */}
 		</div>
 	)
 }

@@ -1,8 +1,10 @@
+import Link from 'next/link'
 import { useMenu } from '../../hooks/index'
 import { Shapes } from '../shapes/Shapes'
 
 const Landing = () => {
 	const { menuOpen, toggleMenu } = useMenu()
+	const resume = '/public/Ngonidzashe-Mugumwa-CV.pdf'
 
 	return (
 		<header className='landing'>
@@ -14,12 +16,19 @@ const Landing = () => {
 					interfaces
 				</p>
 				<div className='landing__buttons'>
-					<button className='landing__buttons--button landing__buttons--contact'>
-						Contact Me
-					</button>
-					<button className='landing__buttons--button landing__buttons--resume'>
-						My Resume
-					</button>
+					<a className='landing__buttons--link' href='#contact'>
+						<button className='landing__buttons--button landing__buttons--contact'>
+							Contact Me
+						</button>
+					</a>
+					<a
+						href='/Ngonidzashe-Mugumwa-CV.pdf'
+						download
+						className='landing__buttons--link'>
+						<button className='landing__buttons--button landing__buttons--resume'>
+							My Resume
+						</button>
+					</a>
 				</div>
 			</div>
 			<Shapes />
