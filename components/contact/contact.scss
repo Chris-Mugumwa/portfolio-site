@@ -1,4 +1,128 @@
 .contact {
 	position: relative;
+	min-height: 100vh;
 	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+
+	&__container {
+		display: none;
+
+		@include respond(tab-land) {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 50%;
+			background-color: #000;
+		}
+	}
+
+	&__wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include respond(tab-land) {
+			width: 50%;
+		}
+	}
+
+	&__heading {
+		font-size: 3.5rem;
+		text-align: center;
+		font-family: $font-libre-franklin;
+		color: $gray-dark;
+		width: 90%;
+
+		@include respond(tab-land) {
+			font-size: 4rem;
+			padding: 1.2rem;
+			border-bottom: 1px solid rgb(56, 54, 54);
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+		margin-top: 2rem;
+		padding: 1.5rem;
+		width: 100%;
+
+		&--container {
+			display: flex;
+			flex-direction: column;
+			gap: 1.8rem;
+
+			@include respond(tab-port) {
+				flex-direction: row;
+			}
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 1rem;
+		margin-top: 1.4rem;
+
+		&--label {
+			margin-bottom: 1.2rem;
+			font-size: 2rem;
+			font-family: $font-poppins;
+			color: $gray-dark;
+		}
+
+		&--input {
+			padding: 1.4rem;
+			border-radius: 0.8rem;
+			border: 0.4px solid $royal-purple;
+			outline: none;
+			font-size: 2.2rem;
+			font-weight: 300;
+			font-family: $font-libre-franklin;
+			color: $gray-dark;
+		}
+	}
+
+	&__textbox {
+		display: flex;
+		flex-direction: column;
+
+		&--input {
+			padding: 1.5rem 2.5rem;
+			// margin-top: 1.4rem;
+		}
+	}
+
+	&__button {
+		padding: 1.5rem;
+		width: 100%;
+		margin-top: 1.2rem;
+		border-top-left-radius: 2rem;
+		border-bottom-right-radius: 2rem;
+		border: none;
+		padding: 2rem 2.5rem;
+		transition: all 0.5s ease-in-out;
+		font-weight: 600;
+		font-family: $font-libre-franklin;
+		font-size: 1.8rem;
+		border: 2px solid $royal-purple;
+		color: $royal-purple;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			border: 2px solid transparent;
+			color: $white;
+			background-color: $royal-purple;
+			border-top-right-radius: 2rem;
+			border-bottom-left-radius: 2rem;
+			border-top-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
 }

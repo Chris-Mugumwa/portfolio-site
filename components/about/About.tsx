@@ -1,27 +1,51 @@
-import { Icon } from '../icons/index'
-import { Shapes } from '../shapes/Shapes'
+import {
+	Icon2,
+	Avatar,
+	Figma,
+	Adobe,
+	Html,
+	Css,
+	Javascript,
+	Git,
+	Github,
+	Tailwind,
+	Sass,
+	React,
+	Typescript,
+	Redux,
+	Next,
+	Jira,
+	Postman,
+	Firebase,
+} from '../icons/index'
+import {
+	MdOutlineDesignServices,
+	MdOutlineCode,
+	MdOutlineHandyman,
+} from 'react-icons/md'
 
 const About = () => {
 	return (
 		<section className='about' id='about'>
 			<nav className='about__navigation'>
-				<Icon className='about__navigation--icon' />
+				<Icon2 className='about__navigation--icon' />
 				<h5 className='about__navigation--label'>About me</h5>
 			</nav>
+			<div className='about__container'>
+				<div className='about__text'>
+					<Avatar />
+					<h1 className='about__text--introduction'>
+						Hey there, I&apos;m Ngoni. Nice to meet you.
+					</h1>
 
-			<div className='about__text'>
-				<h1 className='about__text--introduction'>
-					Hey there, I&apos;m Ngoni
-				</h1>
-
-				<p className='about__text--description'>
-					I took a great interest in the topics of design and front-end
-					development and have dedicated my time to build out applications
-					I find interesting and fun while incorporating my knowledge of
-					design and frontend concepts.
-				</p>
+					<h5 className='about__text--description'>
+						Since beginning my journey as a designer and developer 2 years
+						ago, I&apos;ve worked on projects I&apos;m passionate about.
+						I&apos;m quietly confident, naturally curious, and perpetually
+						working on improving my skills one project at a time.
+					</h5>
+				</div>
 			</div>
-			<Shapes />
 		</section>
 	)
 }

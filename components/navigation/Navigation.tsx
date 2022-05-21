@@ -5,10 +5,6 @@ import { Menu } from '../menu/Menu'
 
 const navigationData = [
 	{
-		name: 'Skills',
-		path: '#skills',
-	},
-	{
 		name: 'Projects',
 		path: '#projects',
 	},

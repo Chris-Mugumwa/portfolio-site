@@ -1,0 +1,278 @@
+.projects {
+	padding: 2.5rem 0;
+	position: relative;
+	z-index: 1000000;
+	height: fit-content;
+	min-height: 300vh;
+
+	&__navigation {
+		position: absolute;
+		top: 0;
+		right: 1%;
+		z-index: inherit;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4%;
+
+		&--icon {
+			transform: scale(0.6);
+		}
+
+		&--label {
+			position: relative;
+			font-family: $font-libre-franklin;
+			font-size: 2rem;
+			color: $gray-dark;
+			padding-right: 1.8rem;
+
+			&::before {
+				position: absolute;
+				bottom: -20%;
+				content: '';
+				height: 0.3rem;
+				width: 60%;
+				background-color: $yellow-bright;
+				border-radius: 1000px;
+			}
+		}
+	}
+
+	&__container {
+		position: inherit;
+		z-index: inherit;
+		display: flex;
+		flex-direction: column;
+		// gap: 2rem;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__wrapper {
+		padding: 2.5rem 1.5rem;
+		margin-top: 2rem;
+		position: relative;
+		height: fit-content;
+		min-height: 100vh;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include respond(tab-land) {
+			padding: 1.5rem;
+		}
+
+		&--color {
+			color: $white;
+			background-image: linear-gradient(
+				180deg,
+				$royal-purple,
+				$strawberry-pink
+			);
+		}
+
+		&--gray {
+			color: $gray-dark;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		position: inherit;
+
+		@include respond(tab-land) {
+			width: 60%;
+		}
+
+		&--middle {
+			@include respond(tab-land) {
+				margin-right: 12rem;
+			}
+		}
+
+		&--visible {
+			display: none;
+		}
+
+		&--hidden {
+			display: inline-flex;
+		}
+
+		&--picture {
+			width: 120%;
+			transform: scale(0.6);
+		}
+	}
+
+	&__details {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 1rem;
+
+		@include respond(tab-land) {
+			width: 40%;
+		}
+
+		&--heading {
+			position: relative;
+			width: 100%;
+			font-size: 4rem;
+			font-family: $font-libre-franklin;
+
+			&::before {
+				position: absolute;
+				bottom: -10%;
+				height: 0.5rem;
+				width: 20%;
+				background-color: $yellow-bright;
+				border-radius: 1000px;
+				content: '';
+
+				@include respond(tab-land) {
+					width: 20%;
+				}
+			}
+
+			@include respond(tab-land) {
+				font-size: 8rem;
+			}
+		}
+
+		&--description {
+			font-size: 1.8rem;
+			font-family: $font-poppins;
+			margin-top: 1.6rem;
+
+			@include respond(tab-land) {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	&__built-with {
+		font-size: 1.4rem;
+		margin-top: 1.6rem;
+		font-family: $font-libre-franklin;
+
+		@include respond(tab-land) {
+			font-size: 2rem;
+		}
+	}
+
+	&__cover {
+		display: flex;
+	}
+
+	&__tool {
+		margin-top: 1.4rem;
+		display: flex;
+		flex-direction: column;
+		list-style: disc;
+		margin-left: 1.2rem;
+		font-size: 1.4rem;
+
+		@include respond(tab-land) {
+			font-size: 1.8rem;
+		}
+	}
+
+	&__buttons {
+		margin-top: 1.8rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+
+		@include respond(desktop) {
+			flex-direction: row;
+		}
+
+		&--button {
+			text-decoration: none;
+			width: 50%;
+			padding: 1.8rem 4rem;
+			border: none;
+			background-color: $white;
+			color: $white;
+			border-top-left-radius: 2rem;
+			border-bottom-right-radius: 2rem;
+			cursor: pointer;
+			font-family: $font-poppins;
+			font-size: 1.6rem;
+			font-weight: 600;
+			transition: all 0.5s ease-in-out;
+
+			@include respond(tab-land) {
+				padding: 1.8rem 6rem;
+				width: 45%;
+			}
+
+			&:hover,
+			&:focus {
+				border-top-right-radius: 2rem;
+				border-bottom-left-radius: 2rem;
+				border-top-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		&--github {
+			background-color: $royal-purple;
+			border: 2px solid transparent;
+
+			& > * {
+				color: $white;
+			}
+
+			&:hover,
+			&:focus {
+				& > * {
+					color: $gray-dark;
+				}
+
+				background-color: transparent;
+				color: $gray-dark;
+				border: 2px solid $yellow-bright;
+			}
+		}
+
+		&--live {
+			border: 2px solid $royal-purple;
+
+			background-color: transparent;
+
+			& > * {
+				color: $white;
+			}
+
+			&:hover,
+			&:focus {
+				& > * {
+					color: $gray-dark;
+				}
+				border: 2px solid transparent;
+				color: $gray-dark;
+				background-color: $yellow-bright;
+			}
+
+			&-link {
+				color: $royal-purple;
+			}
+		}
+
+		&--link {
+			color: $gray-dark;
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		// &--text-github {
+		// 	color: $gray-dark;
+		// }
+	}
+}
