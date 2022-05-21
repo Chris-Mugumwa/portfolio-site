@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
+	suspense: true,
+	ssr: false,
+
 	react: {
 		useSuspense: false,
 		wait: true,

@@ -1,13 +1,11 @@
-import React, { Suspense } from 'react'
 import Head from 'next/head'
-import { AnimatePresence } from 'framer-motion'
-import Navigation from '../components/navigation/Navigation'
-
-const Landing = React.lazy(() => import('../components/landing/Landing'))
-const Projects = React.lazy(() => import('../components/projects/Projects'))
-const About = React.lazy(() => import('../components/about/About'))
-const Contact = React.lazy(() => import('../components/contact/Contact'))
-const Footer = React.lazy(() => import('../components/footer/Footer'))
+// import Navigation from '../components/navigation/Navigation'
+// import Landing from '../components/landing/Landing'
+import Hero from '../components/hero/Hero'
+import Projects from '../components/projects/Projects'
+import About from '../components/about/About'
+import Contact from '../components/contact/Contact'
+import Footer from '../components/footer/Footer'
 
 const Home = () => {
 	return (
@@ -21,16 +19,13 @@ const Home = () => {
 				<link rel='icon' href='/Icon.svg' />
 			</Head>
 
-			<AnimatePresence exitBeforeEnter>
-				<Suspense fallback={'loading'}>
-					<Navigation />
-					<Landing />
-					<Projects />
-					<About />
-					<Contact />
-					<Footer />
-				</Suspense>
-			</AnimatePresence>
+			{/* <Navigation /> */}
+			{/* <Landing /> */}
+			<Hero />
+			<Projects />
+			<About />
+			<Contact />
+			<Footer />
 		</div>
 	)
 }
