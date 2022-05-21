@@ -1,6 +1,8 @@
 @import './mixins/mixins';
 @import './variables/variables';
 
+@import '../components/loading/loading.scss';
+@import '../components/hero/hero.scss';
 @import '../components/navigation/navigation.scss';
 @import '../components/menu/menu.scss';
 @import '../components/landing/landing.scss';

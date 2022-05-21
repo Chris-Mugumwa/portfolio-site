@@ -65,7 +65,7 @@ const Projects = () => {
 				<h4 className='projects__navigation--label'>Projects</h4>
 			</nav>
 
-			<main className='projects__container'>
+			<div className='projects__container'>
 				{projectsData.map((project, index) => (
 					<div
 						className={
@@ -74,6 +74,7 @@ const Projects = () => {
 								: 'projects__wrapper projects__wrapper--color'
 						}
 						key={project.name}>
+						{/* {index === 2 ? <Shapes /> : null} */}
 						<div
 							className={
 								index % 2 === 0
@@ -123,31 +124,27 @@ const Projects = () => {
 							</div>
 
 							<div className='projects__buttons'>
-								<button className='projects__buttons--button projects__buttons--github'>
-									<a
-										href={`${project.github}`}
-										target='_blank'
-										rel='noopener noreferrer'
-										className='projects__buttons--link projects__buttons--github-link'>
-										<IoLogoGithub />
-										<span className='projects__buttons--text-github'>
-											Github
-										</span>
-									</a>
-								</button>
+								<a
+									href={`${project.github}`}
+									target='_blank'
+									rel='noopener noreferrer'
+									className='projects__buttons--link projects__buttons--github-link projects__buttons--button projects__buttons--github'>
+									<IoLogoGithub />
+									<span className='projects__buttons--text-github'>
+										Github
+									</span>
+								</a>
 
-								<button className='projects__buttons--button projects__buttons--live'>
-									<a
-										href={`${project.link}`}
-										target='_blank'
-										rel='noopener noreferrer'
-										className='projects__buttons--link projects__buttons--live-link'>
-										<IoLink className='projects__buttons--text-live' />
-										<span className='projects__buttons--text-live'>
-											Live Demo
-										</span>
-									</a>
-								</button>
+								<a
+									href={`${project.link}`}
+									target='_blank'
+									rel='noopener noreferrer'
+									className='projects__buttons--link projects__buttons--live-link projects__buttons--button projects__buttons--live'>
+									<IoLink className='projects__buttons--text-live' />
+									<span className='projects__buttons--text-live'>
+										Demo
+									</span>
+								</a>
 							</div>
 						</div>
 						<div
@@ -164,7 +161,7 @@ const Projects = () => {
 						</div>
 					</div>
 				))}
-			</main>
+			</div>
 
 			<Shapes />
 		</section>

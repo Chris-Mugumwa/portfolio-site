@@ -80,6 +80,7 @@
 	&__image {
 		width: 100%;
 		position: inherit;
+		z-index: 100000000;
 
 		@include respond(tab-land) {
 			width: 60%;
@@ -106,6 +107,8 @@
 	}
 
 	&__details {
+		position: relative;
+		z-index: 100000000;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -144,10 +147,12 @@
 		&--description {
 			font-size: 1.8rem;
 			font-family: $font-poppins;
+			font-weight: 200;
 			margin-top: 1.6rem;
 
 			@include respond(tab-land) {
 				font-size: 2rem;
+				margin-top: 2.8rem;
 			}
 		}
 	}
@@ -244,7 +249,7 @@
 			background-color: transparent;
 
 			& > * {
-				color: $white;
+				color: $gray-dark;
 			}
 
 			&:hover,

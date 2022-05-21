@@ -24,6 +24,7 @@ body {
 	position: relative;
 	scroll-behavior: smooth;
 	background-color: $white;
+	max-width: 160em;
 }
 
 ::-webkit-scrollbar {
