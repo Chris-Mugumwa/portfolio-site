@@ -871,9 +871,13 @@
   right: 20%;
   top: 60%;
   transform: scale(0.6);
+  -webkit-animation: circle3 infinite ease-in-out 60s;
+          animation: circle3 infinite ease-in-out 60s;
 }
 .shapes__purple2 {
   display: none;
+  -webkit-animation: circle2 infinite ease-in-out 60s;
+          animation: circle2 infinite ease-in-out 60s;
 }
 @media screen and (min-width: 56.25em) {
   .shapes__purple2 {
@@ -885,15 +889,28 @@
 .shapes__square {
   left: 0;
   top: 50%;
+  -webkit-animation: square infinite ease-in-out 60s;
+          animation: square infinite ease-in-out 60s;
 }
 .shapes__yellow {
-  top: 20%;
-  right: 0;
+  display: none;
+  -webkit-animation: circle4 infinite ease-in-out 60s;
+          animation: circle4 infinite ease-in-out 60s;
 }
 @media screen and (min-width: 56.25em) {
   .shapes__yellow {
+    display: inline-flex;
     top: 5%;
     right: 10%;
+    transform: scale(0.9);
+  }
+}
+.shapes__yellow2 {
+  -webkit-animation: circle4 infinite ease-in-out 60s;
+          animation: circle4 infinite ease-in-out 60s;
+}
+@media screen and (min-width: 56.25em) {
+  .shapes__yellow2 {
     transform: scale(0.9);
   }
 }
@@ -901,6 +918,8 @@
   bottom: 0;
   right: -30%;
   transform: scale(0.5);
+  -webkit-animation: circle1 infinite ease-in-out 60s;
+          animation: circle1 infinite ease-in-out 60s;
 }
 @media screen and (min-width: 56.25em) {
   .shapes__triangle {
@@ -909,6 +928,163 @@
   }
 }
 
+@-webkit-keyframes circle1 {
+  0% {
+    transform: translateX(-32rem);
+    transform: scale(0.6);
+  }
+  33% {
+    transform: translateY(43rem);
+    transform: scale(1.1);
+  }
+  66% {
+    transform: translateY(-23rem);
+    transform: translateX(32rem);
+    transform: scale(1.6);
+  }
+  100% {
+    transform: translate3d(-32rem);
+    transform: scale(1.3);
+  }
+}
+
+@keyframes circle1 {
+  0% {
+    transform: translateX(-32rem);
+    transform: scale(0.6);
+  }
+  33% {
+    transform: translateY(43rem);
+    transform: scale(1.1);
+  }
+  66% {
+    transform: translateY(-23rem);
+    transform: translateX(32rem);
+    transform: scale(1.6);
+  }
+  100% {
+    transform: translate3d(-32rem);
+    transform: scale(1.3);
+  }
+}
+@-webkit-keyframes circle2 {
+  0% {
+    transform: translateX(-24rem);
+  }
+  33% {
+    transform: translateY(46rem);
+  }
+  66% {
+    transform: translateY(-26rem);
+    transform: translateX(37rem);
+  }
+  100% {
+    transform: translate3d(-24rem);
+  }
+}
+@keyframes circle2 {
+  0% {
+    transform: translateX(-24rem);
+  }
+  33% {
+    transform: translateY(46rem);
+  }
+  66% {
+    transform: translateY(-26rem);
+    transform: translateX(37rem);
+  }
+  100% {
+    transform: translate3d(-24rem);
+  }
+}
+@-webkit-keyframes circle3 {
+  0% {
+    transform: translateX(-14rem);
+  }
+  33% {
+    transform: translateY(16rem);
+  }
+  66% {
+    transform: translateY(-16rem);
+    transform: translateX(17rem);
+  }
+  100% {
+    transform: translate3d(-14rem);
+  }
+}
+@keyframes circle3 {
+  0% {
+    transform: translateX(-14rem);
+  }
+  33% {
+    transform: translateY(16rem);
+  }
+  66% {
+    transform: translateY(-16rem);
+    transform: translateX(17rem);
+  }
+  100% {
+    transform: translate3d(-14rem);
+  }
+}
+@-webkit-keyframes square {
+  0% {
+    transform: scale(0.6);
+  }
+  33% {
+    transform: scale(0.9);
+  }
+  66% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}
+@keyframes square {
+  0% {
+    transform: scale(0.6);
+  }
+  33% {
+    transform: scale(0.9);
+  }
+  66% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}
+@-webkit-keyframes circle4 {
+  0% {
+    transform: translateX(-24rem);
+  }
+  33% {
+    transform: translateY(26rem);
+  }
+  66% {
+    transform: translateY(-26rem);
+    transform: translateX(17rem);
+  }
+  100% {
+    transform: translate3d(-24rem);
+  }
+}
+@keyframes circle4 {
+  0% {
+    transform: translateX(-24rem);
+  }
+  33% {
+    transform: translateY(26rem);
+  }
+  66% {
+    transform: translateY(-26rem);
+    transform: translateX(17rem);
+  }
+  100% {
+    transform: translate3d(-24rem);
+  }
+}
 .about {
   padding: 0 1.5rem;
   min-height: 100vh;
@@ -1261,6 +1437,8 @@ html {
 body {
   background-color: #fff;
   overflow-x: hidden;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
 }
 
 .app {
