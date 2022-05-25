@@ -33,10 +33,15 @@ const Contact = () => {
 
 	const sendEmail = (formData: FormTypes) => {
 		emailjs
-			.send('gmail', 'template_jc55xxc', formData, 'stBOcJ1cyUbkjWW0E')
+			.send(
+				'service_rv0veow',
+				'template_jc55xxc',
+				formData,
+				'stBOcJ1cyUbkjWW0E',
+			)
 			.then(
-				result => {
-					toast.success(result.text)
+				() => {
+					toast.success('Thank you for reaching out to me.')
 				},
 				error => {
 					toast.error(error.text)

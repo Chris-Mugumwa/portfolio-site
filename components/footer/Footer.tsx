@@ -4,6 +4,8 @@ import {
 	IoLogoGithub,
 	IoLogoLinkedin,
 	IoMailUnreadOutline,
+	IoCallOutline,
+	IoLocationOutline,
 } from 'react-icons/io5'
 
 type SocialType = {
@@ -12,48 +14,53 @@ type SocialType = {
 	link: string
 }[]
 
-const socialData: SocialType = [
-	{
-		name: 'LinkedIn',
-		icon: <IoLogoLinkedin />,
-		link: 'https://www.linkedin.com/in/ngoni-mugumwa-302576227/',
-	},
-	{
-		name: 'Github',
-		icon: <IoLogoGithub />,
-		link: 'https://github.com/Chris-Mugumwa',
-	},
-	{
-		name: 'Dribbble',
-		icon: <IoLogoDribbble />,
-		link: 'https://dribbble.com/Chris_mugs',
-	},
-	{
-		name: 'Gmail',
-		icon: <IoMailUnreadOutline />,
-		link: 'https://ngoni.mugumwa@gmail.com',
-	},
-]
-
 const Footer = () => {
 	return (
 		<footer className='footer'>
-			<Icon2 className='footer__icon' />
-			<h4 className='footer__heading'>
-				Making a difference through code, one project at a time.
-			</h4>
+			<h2 className='footer__heading'>Great meeting you!</h2>
 
-			<div className='footer__container'>
-				{socialData.map(social => (
-					<a
-						href={`${social.link}`}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='footer__wrapper'
-						key={social.name}>
-						<span className='footer__wrapper--icon'>{social.icon}</span>
-					</a>
-				))}
+			<ul className='footer__socials'>
+				<a
+					href='https://www.linkedin.com/in/ngoni-mugumwa-302576227/'
+					target='_blank'
+					rel='noopener noreferrer'
+					className='footer__socials--link'>
+					<LinkedIn className='footer__socials--icon' />
+				</a>
+				<a
+					href='https://github.com/Chris-Mugumwa'
+					target='_blank'
+					rel='noopener noreferrer'
+					className='footer__socials--link'>
+					<Github className='footer__socials--icon' />
+				</a>
+				<a
+					href='https://dribbble.com/Chris_mugs'
+					target='_blank'
+					rel='noopener noreferrer'
+					className='footer__socials--link'>
+					<Dribble className='footer__socials--icon' />
+				</a>
+			</ul>
+
+			<div className='footer__information'>
+				<ul className='footer__addresses'>
+					<li className='footer__addresses--address'>
+						<IoCallOutline />
+						<h5>(+27) 67 025 6956</h5>
+					</li>
+					<li className='footer__addresses--address'>
+						<IoMailUnreadOutline />
+						<h5>ngoni.mugumwa@gmail.com</h5>
+					</li>
+					<li className='footer__addresses--address'>
+						<IoLocationOutline />
+						<h5>
+							Selcourt, Springs <span>Johannesburg, South Africa</span>
+						</h5>
+					</li>
+				</ul>
+				<nav className='footer__navigation'></nav>
 			</div>
 		</footer>
 	)

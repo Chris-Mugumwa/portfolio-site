@@ -1,11 +1,12 @@
 import Head from 'next/head'
-// import Navigation from '../components/navigation/Navigation'
-// import Landing from '../components/landing/Landing'
 import Hero from '../components/hero/Hero'
-import Projects from '../components/projects/Projects'
+// import Projects from '../components/projects/Projects'
+import MyDash from '../components/my-dash/MyDash'
 import About from '../components/about/About'
 import Contact from '../components/contact/Contact'
 import Footer from '../components/footer/Footer'
+import MediaFlyx from '../components/media-flyx/MediaFlyx'
+import SnapFlyx from '../components/snap-flyx/SnapFlyx'
 
 const Home = () => {
 	return (
@@ -19,10 +20,11 @@ const Home = () => {
 				<link rel='icon' href='/Icon.svg' />
 			</Head>
 
-			{/* <Navigation /> */}
-			{/* <Landing /> */}
 			<Hero />
-			<Projects />
+			{/* <Projects /> */}
+			<MyDash />
+			<MediaFlyx />
+			<SnapFlyx />
 			<About />
 			<Contact />
 			<Footer />

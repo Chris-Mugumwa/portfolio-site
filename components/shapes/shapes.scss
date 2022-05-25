@@ -1,5 +1,5 @@
 .shapes {
-	position: absolute;
+	position: fixed;
 	inset: 0;
 	z-index: 50;
 	height: 80vh;
@@ -14,16 +14,12 @@
 		right: 20%;
 		top: 60%;
 		transform: scale(0.6);
+		animation: circle3 infinite ease-in-out 60s;
 	}
-
-	// &__purple {
-	// 	top: 30%;
-	// 	left: 25%;
-	// 	transform: scale(0.7);
-	// }
 
 	&__purple2 {
 		display: none;
+		animation: circle2 infinite ease-in-out 60s;
 
 		@include respond(tab-land) {
 			display: inline-flex;
@@ -35,15 +31,25 @@
 	&__square {
 		left: 0;
 		top: 50%;
+		animation: square infinite ease-in-out 60s;
 	}
 
 	&__yellow {
-		top: 20%;
-		right: 0;
+		display: none;
+		animation: circle4 infinite ease-in-out 60s;
 
 		@include respond(tab-land) {
+			display: inline-flex;
 			top: 5%;
 			right: 10%;
+			transform: scale(0.9);
+		}
+	}
+
+	&__yellow2 {
+		animation: circle4 infinite ease-in-out 60s;
+
+		@include respond(tab-land) {
 			transform: scale(0.9);
 		}
 	}
@@ -52,10 +58,99 @@
 		bottom: 0;
 		right: -30%;
 		transform: scale(0.5);
+		animation: circle1 infinite ease-in-out 60s;
 
 		@include respond(tab-land) {
 			right: 30%;
 			transform: scale(0.9);
 		}
+	}
+}
+
+@keyframes circle1 {
+	0% {
+		transform: translateX(-32rem);
+		transform: scale(0.6);
+	}
+	33% {
+		transform: translateY(43rem);
+		transform: scale(1.1);
+	}
+
+	66% {
+		transform: translateY(-23rem);
+		transform: translateX(32rem);
+		transform: scale(1.6);
+	}
+	100% {
+		transform: translate3d(-32rem);
+		transform: scale(1.3);
+	}
+}
+
+@keyframes circle2 {
+	0% {
+		transform: translateX(-24rem);
+	}
+	33% {
+		transform: translateY(46rem);
+	}
+
+	66% {
+		transform: translateY(-26rem);
+		transform: translateX(37rem);
+	}
+	100% {
+		transform: translate3d(-24rem);
+	}
+}
+
+@keyframes circle3 {
+	0% {
+		transform: translateX(-14rem);
+	}
+	33% {
+		transform: translateY(16rem);
+	}
+
+	66% {
+		transform: translateY(-16rem);
+		transform: translateX(17rem);
+	}
+	100% {
+		transform: translate3d(-14rem);
+	}
+}
+
+@keyframes square {
+	0% {
+		transform: scale(0.6);
+	}
+	33% {
+		transform: scale(0.9);
+	}
+
+	66% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(0.6);
+	}
+}
+
+@keyframes circle4 {
+	0% {
+		transform: translateX(-24rem);
+	}
+	33% {
+		transform: translateY(26rem);
+	}
+
+	66% {
+		transform: translateY(-26rem);
+		transform: translateX(17rem);
+	}
+	100% {
+		transform: translate3d(-24rem);
 	}
 }

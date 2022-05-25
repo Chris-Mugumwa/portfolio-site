@@ -10,7 +10,6 @@ export const Shapes = () => {
 	return (
 		<div className='shapes'>
 			<CircleGray className='shapes__gray' />
-			{/* <CirclePurple className='shapes__purple' /> */}
 			<CirclePurple className='shapes__purple2' />
 			<CircleYellow className='shapes__yellow' />
 			<CircleYellow className='shapes__yellow2' />

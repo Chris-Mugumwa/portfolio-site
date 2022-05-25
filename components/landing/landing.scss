@@ -28,7 +28,7 @@
 		&--name {
 			position: relative;
 			color: $royal-purple;
-			font-family: $font-kreon;
+			font-family: $font-secondary;
 			font-size: 2rem;
 
 			@include respond(tab-land) {
@@ -52,7 +52,7 @@
 
 		&--role {
 			color: $gray-dark;
-			font-family: $font-libre-franklin;
+			font-family: $font-primary;
 			font-size: 5rem;
 			margin-bottom: 0.6rem;
 
@@ -63,7 +63,7 @@
 
 		&--description {
 			color: $gray-dark;
-			font-family: $font-ropa;
+			font-family: $font-secondary;
 			font-size: 2.5rem;
 			margin-bottom: 1rem;
 
@@ -92,7 +92,7 @@
 			border-top-left-radius: 2rem;
 			border-bottom-right-radius: 2rem;
 			cursor: pointer;
-			font-family: $font-poppins;
+			font-family: $font-secondary;
 			font-size: 1.6rem;
 			font-weight: 600;
 			transition: all 0.5s ease-in-out;
@@ -108,6 +108,13 @@
 				border-top-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
+
+			&:active {
+				border-top-right-radius: 2rem;
+				border-bottom-left-radius: 2rem;
+				border-top-left-radius: 2rem;
+				border-bottom-right-radius: 2rem;
+			}
 		}
 
 		&--contact {
@@ -120,17 +127,30 @@
 				color: $gray-dark;
 				border: 2px solid $yellow-bright;
 			}
+
+			&:active {
+				background-color: $royal-purple;
+				border: 2px solid transparent;
+				color: $white;
+			}
 		}
 
 		&--resume {
 			border: 2px solid $royal-purple;
 			color: $royal-purple;
+			background-color: transparent;
 
 			&:hover,
 			&:focus {
 				border: 2px solid transparent;
 				color: $gray-dark;
 				background-color: $yellow-bright;
+			}
+
+			&:active {
+				border: 2px solid $royal-purple;
+				color: $royal-purple;
+				background-color: transparent;
 			}
 		}
 	}

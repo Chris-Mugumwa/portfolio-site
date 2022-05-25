@@ -1,28 +1,22 @@
 import {
 	Icon2,
 	Avatar,
-	Figma,
-	Adobe,
+	Polygon,
 	Html,
 	Css,
 	Javascript,
 	Git,
 	Github,
-	Tailwind,
 	Sass,
+	Tailwind,
 	React,
 	Typescript,
 	Redux,
-	Next,
+	Firebase,
+	Figma,
 	Jira,
 	Postman,
-	Firebase,
 } from '../icons/index'
-import {
-	MdOutlineDesignServices,
-	MdOutlineCode,
-	MdOutlineHandyman,
-} from 'react-icons/md'
 
 const About = () => {
 	return (
@@ -44,6 +38,65 @@ const About = () => {
 						I&apos;m quietly confident, naturally curious, and perpetually
 						working on improving my skills one project at a time.
 					</h5>
+
+					<ul className='about__tech'>
+						<li className='about__tech--item'>
+							<Html className='about__tech--icon' />
+							<h5>HTML5</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Css className='about__tech--icon' />
+							<h5>CSS3</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Javascript className='about__tech--icon' />
+							<h5>Javascript</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Git className='about__tech--icon' />
+							<h5>Git</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Github className='about__tech--icon' />
+							<h5>Github</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Sass className='about__tech--icon' />
+							<h5>Sass</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Tailwind className='about__tech--icon' />
+							<h5>Tailwind</h5>
+						</li>
+						<li className='about__tech--item'>
+							<React className='about__tech--icon' />
+							<h5>React</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Typescript className='about__tech--icon' />
+							<h5>Typescript</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Redux className='about__tech--icon' />
+							<h5>Redux Toolkit</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Firebase className='about__tech--icon' />
+							<h5>Firebase</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Figma className='about__tech--icon' />
+							<h5>Figma</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Jira className='about__tech--icon' />
+							<h5>Jira</h5>
+						</li>
+						<li className='about__tech--item'>
+							<Postman className='about__tech--icon' />
+							<h5>Postman</h5>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</section>

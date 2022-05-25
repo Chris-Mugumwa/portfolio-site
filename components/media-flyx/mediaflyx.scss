@@ -1,0 +1,182 @@
+.media {
+	position: relative;
+	z-index: 1000000;
+	min-height: 100vh;
+	height: fit-content;
+	padding: 0 2.5rem;
+	display: flex;
+	flex-wrap: wrap-reverse;
+	justify-content: space-between;
+	align-items: center;
+	background-image: linear-gradient(180deg, $royal-purple, $strawberry-pink);
+
+	& > * {
+		position: inherit;
+		z-index: inherit;
+	}
+
+	@include respond(tab-land) {
+		height: 100vh;
+		scroll-snap-align: start;
+		scroll-snap-stop: always;
+	}
+
+	&__details {
+		width: 100%;
+		color: $white;
+		text-align: right;
+
+		&--name {
+			position: relative;
+			font-size: 4rem;
+			margin: 2rem 0rem;
+			font-family: $font-primary;
+			font-weight: 600;
+
+			@include respond(tab-land) {
+				font-size: 6rem;
+			}
+
+			&::before {
+				position: absolute;
+				bottom: -10%;
+				height: 0.3rem;
+				width: 20%;
+				background-color: $yellow-bright;
+				border-radius: 1000px;
+				content: '';
+
+				@include respond(tab-land) {
+					width: 20%;
+				}
+			}
+		}
+
+		&--description {
+			font-size: 1.8rem;
+			font-family: $font-secondary;
+			margin: 1.5rem 0rem;
+
+			@include respond(tab-land) {
+				font-size: 2rem;
+			}
+		}
+
+		@include respond(tab-land) {
+			width: 50%;
+		}
+	}
+
+	&__built-with {
+		font-size: 2rem;
+		font-family: $font-primary;
+		font-weight: 400;
+		color: $gray-dark;
+
+		margin-top: 2.6rem;
+
+		@include respond(tab-land) {
+			font-size: 2.4rem;
+		}
+	}
+
+	&__list {
+		margin-top: 1.6rem;
+		margin-right: 2.8rem;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.8rem;
+
+		&--item {
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+			font-size: 1.8rem;
+			font-family: $font-secondary;
+
+			@include respond(tab-land) {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	&__buttons {
+		margin: 3.8rem 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		gap: 1.2rem;
+
+		&--button {
+			font-family: $font-primary;
+			font-size: 1.8rem;
+			width: 80%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.6rem;
+			padding: 1.8rem 3rem;
+			text-decoration: none;
+			border-top-left-radius: 2rem;
+			border-bottom-right-radius: 2rem;
+			transition: all 0.5s ease-in-out;
+
+			@include respond(tab-port) {
+				width: 60%;
+			}
+
+			@include respond(tab-land) {
+				width: 30%;
+			}
+
+			&:hover,
+			&:focus {
+				border-top-left-radius: 0;
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 2rem;
+				border-bottom-left-radius: 2rem;
+			}
+		}
+
+		&--live {
+			background-color: $yellow-bright;
+			color: $gray-dark;
+			border: 2px solid transparent;
+
+			&:hover,
+			&:focus {
+				border: 2px solid $yellow-bright;
+				background-color: transparent;
+				color: $white;
+			}
+		}
+
+		&--github {
+			border: 2px solid $yellow-bright;
+			color: $gray-dark;
+
+			&:hover,
+			&:focus {
+				background-color: $royal-purple;
+				color: $white;
+				border: 2px solid transparent;
+			}
+		}
+	}
+
+	&__image {
+		margin: 6rem 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		@include respond(tab-land) {
+			margin: 0;
+			width: 50%;
+		}
+	}
+}

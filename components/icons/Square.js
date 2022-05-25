@@ -2,8 +2,8 @@ import * as React from "react";
 
 const SvgSquare = (props) => (
   <svg
-    width={165}
-    height={253}
+    width={266}
+    height={252}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
@@ -11,7 +11,7 @@ const SvgSquare = (props) => (
     <path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M164.608.786H-101v251.5h265.608V.786Zm-36.679 34.73h-192.25v182.039h192.25V35.517Z"
+      d="M265.608 0H0v251.5h265.608V0Zm-36.679 34.73H36.679V216.77h192.25V34.731Z"
       fill="#7851A9"
       fillOpacity={0.24}
     />

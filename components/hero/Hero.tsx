@@ -3,7 +3,7 @@ import Landing from '../landing/Landing'
 
 const Hero = () => {
 	return (
-		<section className='hero'>
+		<section className='hero' id='home'>
 			<Navigation />
 			<Landing />
 		</section>

@@ -5,6 +5,10 @@ import { Menu } from '../menu/Menu'
 
 const navigationData = [
 	{
+		name: 'Home',
+		path: '#home',
+	},
+	{
 		name: 'Projects',
 		path: '#projects',
 	},

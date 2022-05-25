@@ -24,6 +24,13 @@ body {
 	position: relative;
 	scroll-behavior: smooth;
 	background-color: $white;
+	scroll-behavior: smooth;
+
+	@include respond(tab-land) {
+		height: 100vh;
+		overflow-y: scroll;
+		scroll-snap-type: y mandatory;
+	}
 }
 
 ::-webkit-scrollbar {

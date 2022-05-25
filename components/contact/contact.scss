@@ -1,9 +1,20 @@
 .contact {
 	position: relative;
+	z-index: 100000;
 	min-height: 100vh;
-	height: 100vh;
+	height: fit-content;
 	display: flex;
 	justify-content: space-between;
+
+	& > * {
+		position: inherit;
+		z-index: inherit;
+	}
+
+	@include respond(tab-land) {
+		height: 100vh;
+		scroll-snap-align: start;
+	}
 
 	&__container {
 		display: none;
@@ -25,10 +36,6 @@
 		justify-content: center;
 		align-items: center;
 
-		@include respond(tab-port) {
-			width: 80%;
-		}
-
 		@include respond(tab-land) {
 			width: 50%;
 		}
@@ -37,7 +44,7 @@
 	&__heading {
 		font-size: 3.5rem;
 		text-align: center;
-		font-family: $font-libre-franklin;
+		font-family: $font-primary;
 		color: $gray-dark;
 		width: 90%;
 
@@ -74,10 +81,14 @@
 		gap: 1rem;
 		margin-top: 1.4rem;
 
+		@include respond(tab-land) {
+			width: 50%;
+		}
+
 		&--label {
 			margin-bottom: 1.2rem;
 			font-size: 2rem;
-			font-family: $font-poppins;
+			font-family: $font-secondary;
 			color: $gray-dark;
 		}
 
@@ -88,8 +99,12 @@
 			outline: none;
 			font-size: 2.2rem;
 			font-weight: 300;
-			font-family: $font-libre-franklin;
+			font-family: $font-primary;
 			color: $gray-dark;
+
+			@include respond(tab-land) {
+				width: 99%;
+			}
 		}
 	}
 
@@ -99,7 +114,6 @@
 
 		&--input {
 			padding: 1.5rem 2.5rem;
-			// margin-top: 1.4rem;
 		}
 	}
 
@@ -113,11 +127,15 @@
 		padding: 2rem 2.5rem;
 		transition: all 0.5s ease-in-out;
 		font-weight: 600;
-		font-family: $font-libre-franklin;
+		font-family: $font-primary;
 		font-size: 1.8rem;
 		border: 2px solid $royal-purple;
 		color: $royal-purple;
 		cursor: pointer;
+
+		@include respond(tab-land) {
+			width: 99%;
+		}
 
 		&:hover,
 		&:focus {
