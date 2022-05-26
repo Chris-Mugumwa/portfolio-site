@@ -21,8 +21,6 @@
 
 	@include respond(tab-land) {
 		height: 100vh;
-		scroll-snap-align: start;
-		scroll-snap-stop: always;
 	}
 
 	&__icon {

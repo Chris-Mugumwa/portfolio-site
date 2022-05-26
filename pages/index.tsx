@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Hero from '../components/hero/Hero'
-// import Projects from '../components/projects/Projects'
 import MyDash from '../components/my-dash/MyDash'
 import About from '../components/about/About'
 import Contact from '../components/contact/Contact'
@@ -21,7 +20,6 @@ const Home = () => {
 			</Head>
 
 			<Hero />
-			{/* <Projects /> */}
 			<MyDash />
 			<MediaFlyx />
 			<SnapFlyx />

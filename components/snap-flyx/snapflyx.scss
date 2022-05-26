@@ -16,8 +16,6 @@
 
 	@include respond(tab-land) {
 		height: 100vh;
-		scroll-snap-align: start;
-		scroll-snap-stop: always;
 	}
 
 	&__details {
@@ -81,6 +79,8 @@
 	&__list {
 		margin-top: 1.6rem;
 		margin-left: 2.8rem;
+		margin-bottom: 2.8rem;
+
 		list-style: none;
 		display: flex;
 		flex-direction: column;

@@ -13,7 +13,6 @@
 
 	@include respond(tab-land) {
 		height: 100vh;
-		scroll-snap-align: start;
 	}
 
 	&__container {
@@ -35,6 +34,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		padding: 0 1.8rem;
 
 		@include respond(tab-land) {
 			width: 50%;
