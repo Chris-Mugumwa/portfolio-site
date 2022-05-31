@@ -1,8 +1,6 @@
-import { useMenu } from '../../hooks/index'
 import { Shapes } from '../shapes/Shapes'
 
 const Landing = () => {
-	const { menuOpen, toggleMenu } = useMenu()
 	const resume = '/public/Ngonidzashe-Mugumwa-CV.pdf'
 
 	return (
