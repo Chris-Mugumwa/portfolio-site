@@ -6,7 +6,7 @@ const mediaData = [
 	{
 		name: 'Media-Flyx',
 		description:
-			'A movie & tv-show web application that allows users to query a vast number of movies, tv-shows, and anime. Users can also preview videos based on the queried entertainment media and view details provided by the Movie Database Api. Built using: React.js, Sass, Redux Toolkit, and Firebase.',
+			'A movie & tv-show web application that allows users to query a vast number of movies, tv-shows, and anime. Users can also preview videos based on the queried entertainment media and view details provided by the Movie Database Api.',
 		frontend: 'React.js',
 		styling: 'Sass',
 		state: 'Redux Toolkit',
